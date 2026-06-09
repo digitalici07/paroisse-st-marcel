@@ -180,7 +180,7 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:.9rem}
 .gitem{border-radius:16px;overflow:hidden;cursor:pointer;position:relative;transition:transform .3s}
 .gitem:hover{transform:scale(1.02)}
-.gitem svg{width:100%;height:100%;object-fit:cover}
+.gitem svg,.gitem img{width:100%;height:100%;object-fit:cover;display:block}
 .gitem .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.9rem 1rem;color:#fff;font-weight:700;font-size:.85rem;background:linear-gradient(180deg,transparent,rgba(16,53,39,.78));text-shadow:0 1px 3px rgba(0,0,0,.4)}
 .span2{grid-column:span 2}.row2{grid-row:span 2}
 .media-pane{display:none}.media-pane.active{display:block}
@@ -258,6 +258,7 @@ footer{background:var(--forest);color:rgba(255,255,255,.78);padding:3.5rem 0 0}
 .lb-content{max-width:720px;width:100%;text-align:center;color:#fff}
 .lb-frame{aspect-ratio:16/10;border-radius:18px;overflow:hidden;margin-bottom:1rem;box-shadow:var(--shadow)}
 .lb-frame svg{width:100%;height:100%}
+.lb-frame img{width:100%;height:100%;object-fit:cover;display:block}
 .lb-content h3{color:#fff;font-size:1.8rem}
 .lb-close{position:absolute;top:1.5rem;right:1.5rem;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:1.4rem;cursor:pointer}
 
@@ -612,17 +613,16 @@ footer{background:var(--forest);color:rgba(255,255,255,.78);padding:3.5rem 0 0}
     <div class="media-pane active" id="pane-photos">
       <div class="gallery">
         <div class="gitem span2 row2" data-title="Messe dominicale">
-          <svg viewBox="0 0 400 360" preserveAspectRatio="xMidYMid slice"><rect width="400" height="360" fill="url(#emer)"/><circle cx="200" cy="150" r="120" fill="url(#halo)"/><rect x="120" y="170" width="160" height="150" rx="6" fill="#faf5e9"/><rect x="170" y="100" width="60" height="70" fill="#fffdf7"/><polygon points="170,100 200,64 230,100" fill="url(#copperG)"/><path d="M200 64v-20M192 54h16" stroke="#d6ad4d" stroke-width="4"/><circle cx="200" cy="240" r="28" fill="#16432f"/><path d="M200 240 L200 212 A28 28 0 0 1 224 254Z" fill="#d6ad4d"/><path d="M200 240 L224 254 A28 28 0 0 1 200 268Z" fill="#e7cd86"/><path d="M200 240 L200 268 A28 28 0 0 1 176 254Z" fill="#bb7338"/><path d="M200 240 L176 254 A28 28 0 0 1 200 212Z" fill="#d59a5d"/></svg>
+          <img src="images/ST%20MARCEL%201.jpg" alt="Messe dominicale" loading="lazy">
           <div class="cap">Messe dominicale</div></div>
-        <div class="gitem" data-title="Première communion"><svg viewBox="0 0 200 180" preserveAspectRatio="xMidYMid slice"><rect width="200" height="180" fill="url(#copperG)"/><path d="M80 70h40l-5 30a15 15 0 0 1-30 0z" fill="#fffdf7"/><circle cx="100" cy="58" r="9" fill="#e7cd86"/></svg><div class="cap">Première communion</div></div>
-        <div class="gitem" data-title="Chorale"><svg viewBox="0 0 200 180" preserveAspectRatio="xMidYMid slice"><rect width="200" height="180" fill="url(#sky)"/><path d="M85 120V70l40-7v50" fill="none" stroke="#e7cd86" stroke-width="5"/><circle cx="80" cy="120" r="11" fill="#d6ad4d"/><circle cx="125" cy="113" r="11" fill="#bb7338"/></svg><div class="cap">Chorale paroissiale</div></div>
-        <div class="gitem span2" data-title="Fête patronale"><svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice"><rect width="400" height="180" fill="url(#emer)"/><g fill="none" stroke="#e7cd86" stroke-width="3" opacity=".6"><path d="M60 150 Q70 90 90 60"/><path d="M340 150 Q330 90 310 60"/></g><path d="M200 50l6 16h17l-13 10 5 17-15-10-15 10 5-17-13-10h17z" fill="#d6ad4d"/></svg><div class="cap">Fête de Saint Marcel</div></div>
+        <div class="gitem" data-title="Première communion"><img src="images/ST%20MARCEL%202.jpg" alt="Première communion" loading="lazy"><div class="cap">Première communion</div></div>
+        <div class="gitem" data-title="Chorale"><img src="images/ST%20MARCEL%203.jpg" alt="Chorale paroissiale" loading="lazy"><div class="cap">Chorale paroissiale</div></div>
+        <div class="gitem span2" data-title="Fête patronale"><img src="images/ST%20MARCEL%204.jpg" alt="Fête de Saint Marcel" loading="lazy"><div class="cap">Fête de Saint Marcel</div></div>
         <div class="gitem" data-title="Baptêmes"><svg viewBox="0 0 200 180" preserveAspectRatio="xMidYMid slice"><rect width="200" height="180" fill="url(#emer)"/><path d="M100 60c8 12 8 22 0 32-8-10-8-20 0-32z" fill="#7fa389"/><path d="M70 120c20-8 40-8 60 0" stroke="#e7cd86" stroke-width="4" fill="none"/></svg><div class="cap">Baptêmes</div></div>
         <div class="gitem" data-title="Procession"><svg viewBox="0 0 200 180" preserveAspectRatio="xMidYMid slice"><rect width="200" height="180" fill="url(#copperG)"/><path d="M100 50v70M80 64l20-12 20 12" stroke="#fffdf7" stroke-width="5" fill="none"/></svg><div class="cap">Procession mariale</div></div>
         <div class="gitem" data-title="Servants"><svg viewBox="0 0 200 180" preserveAspectRatio="xMidYMid slice"><rect width="200" height="180" fill="url(#sky)"/><circle cx="100" cy="70" r="18" fill="#e7cd86"/><path d="M64 140c0-22 16-36 36-36s36 14 36 36" fill="#faf5e9"/></svg><div class="cap">Servants de messe</div></div>
         <div class="gitem" data-title="Confirmation"><svg viewBox="0 0 200 180" preserveAspectRatio="xMidYMid slice"><rect width="200" height="180" fill="url(#emer)"/><path d="M100 122c-7-5-12-9-12-15a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 6-5 10-12 15z" fill="#d6ad4d" transform="scale(1.6) translate(-37,-30)"/></svg><div class="cap">Confirmation</div></div>
       </div>
-      <p style="margin-top:1.5rem;color:var(--muted);font-size:.9rem">↳ Remplacez ces illustrations par vos vraies photos : <code>&lt;div class="gitem"&gt;&lt;img src="images/ma-photo.jpg"&gt;&lt;div class="cap"&gt;Légende&lt;/div&gt;&lt;/div&gt;</code></p>
     </div>
 
     <div class="media-pane" id="pane-albums">
@@ -765,7 +765,7 @@ document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
 
 const lb=document.getElementById('lightbox');
 function openLB(title,svg){document.getElementById('lb-title').textContent=title;document.getElementById('lb-frame').innerHTML=svg;lb.classList.add('open');}
-document.querySelectorAll('.gitem').forEach(g=>g.addEventListener('click',()=>openLB(g.dataset.title,g.querySelector('svg').outerHTML)));
+document.querySelectorAll('.gitem').forEach(g=>g.addEventListener('click',()=>openLB(g.dataset.title,(g.querySelector('img')||g.querySelector('svg')).outerHTML)));
 document.querySelectorAll('.video').forEach(v=>v.addEventListener('click',()=>openLB('▶ '+v.dataset.video,v.querySelector('svg.bg').outerHTML)));
 function closeLB(){lb.classList.remove('open')}
 lb.addEventListener('click',e=>{if(e.target===lb)closeLB()});
