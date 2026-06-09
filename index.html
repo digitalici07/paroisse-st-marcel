@@ -53,6 +53,8 @@ header{position:sticky;top:0;z-index:90;backdrop-filter:blur(10px);background:rg
 .crest{width:48px;height:48px;flex:none}
 .brand b{font-family:"Cormorant Garamond";font-weight:700;font-size:1.18rem;display:block;line-height:1}
 .brand span{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);font-weight:800}
+.brand-logo{height:52px;width:auto;display:block}
+@media(max-width:560px){.brand-logo{height:42px}}
 .menu{display:flex;align-items:center;gap:.1rem;list-style:none}
 .menu a{font-weight:700;font-size:.85rem;padding:.5rem .68rem;border-radius:8px;transition:.2s}
 .menu a:hover{color:var(--copper)}
@@ -304,13 +306,7 @@ footer{background:var(--forest);color:rgba(255,255,255,.78);padding:3.5rem 0 0}
   <div class="vine"></div>
   <div class="wrap nav">
     <a class="brand" href="#top">
-      <svg class="crest" viewBox="0 0 48 48">
-        <circle cx="24" cy="24" r="23" fill="url(#emer)" stroke="#d6ad4d" stroke-width="2"/>
-        <path d="M24 9v30M16 17h16" stroke="#e7cd86" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M24 30c4-2 7-6 7-11 0-3-2-5-4-5" stroke="#d6ad4d" stroke-width="1.6" fill="none" opacity=".7"/>
-        <circle cx="24" cy="24" r="2.4" fill="#e7cd86"/>
-      </svg>
-      <div><b>Saint Marcel</b><span>Paroisse • Bingerville</span></div>
+      <img src="images/logo.png" alt="Paroisse Saint Marcel — Akouai Santai — Amour et joie de vivre" class="brand-logo">
     </a>
     <nav>
       <ul class="menu">
